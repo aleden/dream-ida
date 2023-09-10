@@ -2,7 +2,7 @@
 // Copyright (C) 2011-2017 Khaled Yakdan.
 // All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
-#include <math.h>
+#include <cmath>
 #include "ExponentiationExpression.h"
 #include "../Constant/NumericConstant.h"
 
