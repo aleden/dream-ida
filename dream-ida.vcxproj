@@ -78,20 +78,20 @@
     <ClCompile>
       <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;WIN32;_DEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk66\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>c:\idasdk64\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>c:\idasdk66\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;_DEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk66\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
     <ClCompile>
       <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;WIN32;NDEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk66\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -111,14 +111,14 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>c:\idasdk64\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>c:\idasdk66\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;NDEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk66\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
