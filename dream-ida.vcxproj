@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{7FEC7EC9-E11D-44CD-964B-B259C4DF8A8D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;WIN32;_DEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>c:\idasdk64\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;_DEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;WIN32;NDEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>c:\idasdk64\lib\x86_win_vc_32\ida.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>__NT__;__IDP__;USE_DANGEROUS_FUNCTIONS;USE_STANDARD_FILE_FUNCTIONS;NDEBUG;_WINDOWS;_USRDLL;DREAMIDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\boost_1_83_0;C:\idasdk64\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="codegeneration\DecompiledCodeGenerator.cpp" />
+    <ClCompile Include="controlflowanalysis\CompoundConditionalStructurer.cpp" />
+    <ClCompile Include="controlflowanalysis\conditionalsstructuring\Conditional.cpp" />
+    <ClCompile Include="controlflowanalysis\conditionalsstructuring\ConditionalStructurer.cpp" />
+    <ClCompile Include="controlflowanalysis\ControlFlowAnalyzer.cpp" />
+    <ClCompile Include="controlflowanalysis\derivedgraphsequence\DerivedGraphSequenceConstructor.cpp" />
+    <ClCompile Include="controlflowanalysis\derivedgraphsequence\DerivedSequenceItem.cpp" />
+    <ClCompile Include="controlflowanalysis\GraphStructeringInfo.cpp" />
+    <ClCompile Include="controlflowanalysis\graphtraversal\DFSOrderVisitor.cpp" />
+    <ClCompile Include="controlflowanalysis\graphtraversal\GraphPaths.cpp" />
+    <ClCompile Include="controlflowanalysis\graphtraversal\GraphTraversal.cpp" />
+    <ClCompile Include="controlflowanalysis\graphtraversal\VertexOrdering.cpp" />
+    <ClCompile Include="controlflowanalysis\graphutilities\GraphConverter.cpp" />
+    <ClCompile Include="controlflowanalysis\loopstructuring\Loop.cpp" />
+    <ClCompile Include="controlflowanalysis\loopstructuring\LoopStructurer.cpp" />
+    <ClCompile Include="controlflowanalysis\nwaystructuring\NWayStructurer.cpp" />
+    <ClCompile Include="controlflowanalysis\nwaystructuring\NWaySwitch.cpp" />
+    <ClCompile Include="controlflowanalysis\TrivialNodesEliminator.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\ConditionCodePropagation.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\DataFlowAlgorithm.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\DeadCodeElimination.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\ExpressionPropagation.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\FunctionArgumentsDetector.cpp" />
+    <ClCompile Include="dataflowanalysis\algorithms\LivenessAnalysis.cpp" />
+    <ClCompile Include="dataflowanalysis\DataFlowAnalyzer.cpp" />
+    <ClCompile Include="dataflowanalysis\datastructures\Variable.cpp" />
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\localMathematicalSimplifications.cpp" />
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\OperandSimplificationInfo.cpp" />
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\SimplificationFeasibilityChecks.cpp" />
+    <ClCompile Include="intermediaterepresentation\ControlFlowGraph.cpp" />
+    <ClCompile Include="intermediaterepresentation\DefinitionResolver.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\AdditionExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\ANDExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\AssociativeCommutativeExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\MultiplicationExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\ORExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\XORExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\BinaryNonCommutativeExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\DivisionExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ExponentiationExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\RemainderExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ShiftExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\condition\Condition.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\condition\HighLevelCondition.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\condition\LowLevelCondition.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\constant\Constant.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\constant\NumericConstant.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\constant\SymbolicConstant.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\Expression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\Flag.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\FlagConcatenation.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\LocalVariable.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\location\GlobalVariable.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\location\Location.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\location\StackVariable.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\MathFunction.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\PointerExp.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\Register.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\StringLiteral.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\TernaryExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\AddressExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\LogicalNotExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\NegationExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\UnaryExpression.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\Assignment.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\BinaryInstruction.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\ConditionalJump.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\Call.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\ADDFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FCOMFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FloatingPoint_SUBFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\IMULFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\INCFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\LogicalFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\MULFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\NEGFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\ROLFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\RORFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SALFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SARFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SHRFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SUBFlagMacro.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\Instruction.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\Phi_Function.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\DirectJump.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectJump.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectTableJump.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\Jump.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\Return.cpp" />
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\UnaryInstruction.cpp" />
+    <ClCompile Include="intermediaterepresentation\irbuilder\InstructionHandler.cpp" />
+    <ClCompile Include="intermediaterepresentation\irbuilder\IRBuilder.cpp" />
+    <ClCompile Include="intermediaterepresentation\irbuilder\OperandHandler.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\ExitNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\Node.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\N_WayNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\OneWayNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\onewaynode\FallThroughNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\onewaynode\JumpNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\ReturnNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\node\TwoWayNode.cpp" />
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\InterferenceBreaker.cpp" />
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\PhiFunctionsEliminator.cpp" />
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\SSABackTranslator.cpp" />
+    <ClCompile Include="intermediaterepresentation\ssa\DefinitionInfo.cpp" />
+    <ClCompile Include="intermediaterepresentation\ssa\SSATransformer.cpp" />
+    <ClCompile Include="plugin.cpp" />
+    <ClCompile Include="RelatedRegisters.cpp" />
+    <ClCompile Include="shared\ColoredStrings.cpp" />
+    <ClCompile Include="shared\ExpressionUtilities.cpp" />
+    <ClCompile Include="shared\GraphViewer.cpp" />
+    <ClCompile Include="shared\houseKeepingUtilities.cpp" />
+    <ClCompile Include="shared\InstructionUtilities.cpp" />
+    <ClCompile Include="shared\RelatedRegistersMonitor.cpp" />
+    <ClCompile Include="typeanalysis\typeanalyzer\TypeAnalyzer.cpp" />
+    <ClCompile Include="typeanalysis\TypeDecoder.cpp" />
+    <ClCompile Include="typeanalysis\TypeMap.cpp" />
+    <ClCompile Include="typeanalysis\types\composedtype\ArrayType.cpp" />
+    <ClCompile Include="typeanalysis\types\composedtype\ClassType.cpp" />
+    <ClCompile Include="typeanalysis\types\composedtype\ComposedType.cpp" />
+    <ClCompile Include="typeanalysis\types\composedtype\UnionType.cpp" />
+    <ClCompile Include="typeanalysis\types\NoType.cpp" />
+    <ClCompile Include="typeanalysis\types\simpletype\IntegralType.cpp" />
+    <ClCompile Include="typeanalysis\types\simpletype\PointerType.cpp" />
+    <ClCompile Include="typeanalysis\types\simpletype\SimpleType.cpp" />
+    <ClCompile Include="typeanalysis\types\TopType.cpp" />
+    <ClCompile Include="typeanalysis\types\TypeBase.cpp" />
+    <ClCompile Include="typeanalysis\types\UnresolvedNamedType.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codegeneration\DecompiledCodeGenerator.h" />
+    <ClInclude Include="controlflowanalysis\CompoundConditionalStructurer.h" />
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\Conditional.h" />
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\ConditionalStructurer.h" />
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\ConditionalTypes.h" />
+    <ClInclude Include="controlflowanalysis\ControlFlowAnalyzer.h" />
+    <ClInclude Include="controlflowanalysis\derivedgraphsequence\DerivedGraphSequenceConstructor.h" />
+    <ClInclude Include="controlflowanalysis\derivedgraphsequence\DerivedSequenceItem.h" />
+    <ClInclude Include="controlflowanalysis\GraphStructeringInfo.h" />
+    <ClInclude Include="controlflowanalysis\graphtraversal\DFSOrderVisitor.h" />
+    <ClInclude Include="controlflowanalysis\graphtraversal\GraphPaths.h" />
+    <ClInclude Include="controlflowanalysis\graphtraversal\GraphTraversal.h" />
+    <ClInclude Include="controlflowanalysis\graphtraversal\VertexOrdering.h" />
+    <ClInclude Include="controlflowanalysis\GraphTypes.h" />
+    <ClInclude Include="controlflowanalysis\graphutilities\GraphConverter.h" />
+    <ClInclude Include="controlflowanalysis\loopstructuring\Loop.h" />
+    <ClInclude Include="controlflowanalysis\loopstructuring\LoopStructurer.h" />
+    <ClInclude Include="controlflowanalysis\loopstructuring\LoopTypes.h" />
+    <ClInclude Include="controlflowanalysis\nwaystructuring\NWayStructurer.h" />
+    <ClInclude Include="controlflowanalysis\nwaystructuring\NWaySwitch.h" />
+    <ClInclude Include="controlflowanalysis\TrivialNodesEliminator.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\ConditionCodePropagation.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\DataFlowAlgorithm.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\DeadCodeElimination.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\ExpressionPropagation.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\FunctionArgumentsDetector.h" />
+    <ClInclude Include="dataflowanalysis\algorithms\LivenessAnalysis.h" />
+    <ClInclude Include="dataflowanalysis\DataFlowAnalyzer.h" />
+    <ClInclude Include="dataflowanalysis\datastructures\Variable.h" />
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\localMathematicalSimplifications.h" />
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\OperandSimplificationInfo.h" />
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\SimplificationFeasibilityChecks.h" />
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\SimplificationTypes.h" />
+    <ClInclude Include="intermediaterepresentation\ControlFlowGraph.h" />
+    <ClInclude Include="intermediaterepresentation\DefinitionResolver.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\BranchTypes.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\CodeColors.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\FlagMacros.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\Flags.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\RegisterTypes.h" />
+    <ClInclude Include="intermediaterepresentation\enumerations\SymbolicConstantValues.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\AdditionExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\ANDExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\AssociativeCommutativeExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\MultiplicationExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\ORExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\XORExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\BinaryNonCommutativeExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\DivisionExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ExponentiationExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\RemainderExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ShiftExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\condition\Condition.h" />
+    <ClInclude Include="intermediaterepresentation\expression\condition\HighLevelCondition.h" />
+    <ClInclude Include="intermediaterepresentation\expression\condition\LowLevelCondition.h" />
+    <ClInclude Include="intermediaterepresentation\expression\constant\Constant.h" />
+    <ClInclude Include="intermediaterepresentation\expression\constant\NumericConstant.h" />
+    <ClInclude Include="intermediaterepresentation\expression\constant\SymbolicConstant.h" />
+    <ClInclude Include="intermediaterepresentation\expression\Expression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\ExpressionTypes.h" />
+    <ClInclude Include="intermediaterepresentation\expression\Flag.h" />
+    <ClInclude Include="intermediaterepresentation\expression\FlagConcatenation.h" />
+    <ClInclude Include="intermediaterepresentation\expression\LocalVariable.h" />
+    <ClInclude Include="intermediaterepresentation\expression\location\GlobalVariable.h" />
+    <ClInclude Include="intermediaterepresentation\expression\location\Location.h" />
+    <ClInclude Include="intermediaterepresentation\expression\location\StackVariable.h" />
+    <ClInclude Include="intermediaterepresentation\expression\MathFunction.h" />
+    <ClInclude Include="intermediaterepresentation\expression\PointerExp.h" />
+    <ClInclude Include="intermediaterepresentation\expression\Register.h" />
+    <ClInclude Include="intermediaterepresentation\expression\StringLiteral.h" />
+    <ClInclude Include="intermediaterepresentation\expression\TernaryExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\AddressExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\LogicalNotExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\NegationExpression.h" />
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\UnaryExpression.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\Assignment.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\BinaryInstruction.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\ConditionalJump.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\Call.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\ADDFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FCOMFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FlagMacroTypes.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FloatingPoint_SUBFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\IMULFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\INCFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\LogicalFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\MULFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\NEGFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\ROLFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\RORFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SALFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SARFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SHRFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SUBFlagMacro.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\Instruction.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\InstructionTypes.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\Phi_Function.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\DirectJump.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectJump.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectTableJump.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\Jump.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\Return.h" />
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\UnaryInstruction.h" />
+    <ClInclude Include="intermediaterepresentation\irbuilder\FunctionInfo.h" />
+    <ClInclude Include="intermediaterepresentation\irbuilder\InstructionHandler.h" />
+    <ClInclude Include="intermediaterepresentation\irbuilder\IRBuilder.h" />
+    <ClInclude Include="intermediaterepresentation\irbuilder\MathematicalOperators.h" />
+    <ClInclude Include="intermediaterepresentation\irbuilder\OperandHandler.h" />
+    <ClInclude Include="intermediaterepresentation\IRHeaders.h" />
+    <ClInclude Include="intermediaterepresentation\IRSharedPointers.h" />
+    <ClInclude Include="intermediaterepresentation\node\ExitNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\Node.h" />
+    <ClInclude Include="intermediaterepresentation\node\NodeTypes.h" />
+    <ClInclude Include="intermediaterepresentation\node\N_WayNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\OneWayNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\onewaynode\FallThroughNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\onewaynode\JumpNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\ReturnNode.h" />
+    <ClInclude Include="intermediaterepresentation\node\TwoWayNode.h" />
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\InterferenceBreaker.h" />
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\PhiFunctionsEliminator.h" />
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\SSABackTranslator.h" />
+    <ClInclude Include="intermediaterepresentation\ssa\DefinitionInfo.h" />
+    <ClInclude Include="intermediaterepresentation\ssa\SSATransformer.h" />
+    <ClInclude Include="RelatedRegisters.h" />
+    <ClInclude Include="shared\ColoredStrings.h" />
+    <ClInclude Include="shared\ExpressionUtilities.h" />
+    <ClInclude Include="shared\GraphViewer.h" />
+    <ClInclude Include="shared\houseKeepingUtilities.h" />
+    <ClInclude Include="shared\InstructionUtilities.h" />
+    <ClInclude Include="shared\RelatedRegistersMonitor.h" />
+    <ClInclude Include="typeanalysis\typeanalyzer\TypeAnalyzer.h" />
+    <ClInclude Include="typeanalysis\TypeDecoder.h" />
+    <ClInclude Include="typeanalysis\TypeMap.h" />
+    <ClInclude Include="typeanalysis\TypeSharedPointers.h" />
+    <ClInclude Include="typeanalysis\types\composedtype\ArrayType.h" />
+    <ClInclude Include="typeanalysis\types\composedtype\ClassType.h" />
+    <ClInclude Include="typeanalysis\types\composedtype\ComposedType.h" />
+    <ClInclude Include="typeanalysis\types\composedtype\UnionType.h" />
+    <ClInclude Include="typeanalysis\types\NoType.h" />
+    <ClInclude Include="typeanalysis\types\simpletype\IntegralType.h" />
+    <ClInclude Include="typeanalysis\types\simpletype\IntegralTypes.h" />
+    <ClInclude Include="typeanalysis\types\simpletype\PointerType.h" />
+    <ClInclude Include="typeanalysis\types\simpletype\SimpleType.h" />
+    <ClInclude Include="typeanalysis\types\TopType.h" />
+    <ClInclude Include="typeanalysis\types\TypeBase.h" />
+    <ClInclude Include="typeanalysis\types\TypeTypes.h" />
+    <ClInclude Include="typeanalysis\types\UnresolvedNamedType.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

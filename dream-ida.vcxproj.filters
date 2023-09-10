@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RelatedRegisters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codegeneration\DecompiledCodeGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\CompoundConditionalStructurer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\ControlFlowAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\GraphStructeringInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\TrivialNodesEliminator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\conditionalsstructuring\Conditional.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\conditionalsstructuring\ConditionalStructurer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\derivedgraphsequence\DerivedGraphSequenceConstructor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\derivedgraphsequence\DerivedSequenceItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\graphtraversal\DFSOrderVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\graphtraversal\GraphPaths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\graphtraversal\GraphTraversal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\graphtraversal\VertexOrdering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\graphutilities\GraphConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\loopstructuring\Loop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\loopstructuring\LoopStructurer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\nwaystructuring\NWayStructurer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlflowanalysis\nwaystructuring\NWaySwitch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\DataFlowAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\ConditionCodePropagation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\DataFlowAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\DeadCodeElimination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\ExpressionPropagation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\FunctionArgumentsDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\algorithms\LivenessAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\datastructures\Variable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\localMathematicalSimplifications.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\OperandSimplificationInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataflowanalysis\mathematicalsimplification\SimplificationFeasibilityChecks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ControlFlowGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\DefinitionResolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\Expression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\Flag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\FlagConcatenation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\LocalVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\MathFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\PointerExp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\Register.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\StringLiteral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\TernaryExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\AdditionExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\ANDExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\AssociativeCommutativeExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\MultiplicationExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\ORExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\associativecommutativeexpression\XORExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\BinaryNonCommutativeExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\DivisionExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ExponentiationExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\RemainderExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ShiftExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\condition\Condition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\condition\HighLevelCondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\condition\LowLevelCondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\constant\Constant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\constant\NumericConstant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\constant\SymbolicConstant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\location\GlobalVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\location\Location.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\location\StackVariable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\AddressExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\LogicalNotExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\NegationExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\expression\unaryexpression\UnaryExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\Call.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\Phi_Function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\Assignment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\BinaryInstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\binaryinstruction\ConditionalJump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\ADDFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FCOMFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\FloatingPoint_SUBFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\IMULFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\INCFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\LogicalFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\MULFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\NEGFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\ROLFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\RORFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SALFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SARFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SHRFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\flagmacro\SUBFlagMacro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\Return.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\UnaryInstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\DirectJump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectJump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectTableJump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\instruction\unaryinstruction\jump\Jump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\irbuilder\InstructionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\irbuilder\IRBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\irbuilder\OperandHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\ExitNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\N_WayNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\OneWayNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\ReturnNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\TwoWayNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\onewaynode\FallThroughNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\node\onewaynode\JumpNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ssa\DefinitionInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ssa\SSATransformer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\InterferenceBreaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\PhiFunctionsEliminator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intermediaterepresentation\ssa\backtranslation\SSABackTranslator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\ColoredStrings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\ExpressionUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\GraphViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\houseKeepingUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\InstructionUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shared\RelatedRegistersMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\TypeDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\TypeMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\typeanalyzer\TypeAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\NoType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\TopType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\TypeBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\UnresolvedNamedType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\composedtype\ArrayType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\composedtype\ClassType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\composedtype\ComposedType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\composedtype\UnionType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\simpletype\IntegralType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\simpletype\PointerType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typeanalysis\types\simpletype\SimpleType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RelatedRegisters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codegeneration\DecompiledCodeGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\CompoundConditionalStructurer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\ControlFlowAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\GraphStructeringInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\GraphTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\TrivialNodesEliminator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\Conditional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\ConditionalStructurer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\conditionalsstructuring\ConditionalTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\derivedgraphsequence\DerivedGraphSequenceConstructor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\derivedgraphsequence\DerivedSequenceItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\graphtraversal\DFSOrderVisitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\graphtraversal\GraphPaths.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\graphtraversal\GraphTraversal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\graphtraversal\VertexOrdering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\graphutilities\GraphConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\loopstructuring\Loop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\loopstructuring\LoopStructurer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\loopstructuring\LoopTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\nwaystructuring\NWayStructurer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlflowanalysis\nwaystructuring\NWaySwitch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\DataFlowAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\ConditionCodePropagation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\DataFlowAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\DeadCodeElimination.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\ExpressionPropagation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\FunctionArgumentsDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\algorithms\LivenessAnalysis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\datastructures\Variable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\localMathematicalSimplifications.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\OperandSimplificationInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\SimplificationFeasibilityChecks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataflowanalysis\mathematicalsimplification\SimplificationTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ControlFlowGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\DefinitionResolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\IRHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\IRSharedPointers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\BranchTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\CodeColors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\FlagMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\Flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\RegisterTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\enumerations\SymbolicConstantValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\Expression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\ExpressionTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\Flag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\FlagConcatenation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\LocalVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\MathFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\PointerExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\Register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\StringLiteral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\TernaryExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\AdditionExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\ANDExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\AssociativeCommutativeExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\MultiplicationExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\ORExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\associativecommutativeexpression\XORExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\BinaryNonCommutativeExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\DivisionExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ExponentiationExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\RemainderExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\binarynoncommutativeexpression\ShiftExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\condition\Condition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\condition\HighLevelCondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\condition\LowLevelCondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\constant\Constant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\constant\NumericConstant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\constant\SymbolicConstant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\location\GlobalVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\location\Location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\location\StackVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\AddressExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\LogicalNotExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\NegationExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\expression\unaryexpression\UnaryExpression.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\Call.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\InstructionTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\Phi_Function.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\Assignment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\BinaryInstruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\binaryinstruction\ConditionalJump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\ADDFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FCOMFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FlagMacroTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\FloatingPoint_SUBFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\IMULFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\INCFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\LogicalFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\MULFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\NEGFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\ROLFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\RORFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SALFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SARFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SHRFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\flagmacro\SUBFlagMacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\Return.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\UnaryInstruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\DirectJump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectJump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\IndirectTableJump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\instruction\unaryinstruction\jump\Jump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\irbuilder\FunctionInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\irbuilder\InstructionHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\irbuilder\IRBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\irbuilder\MathematicalOperators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\irbuilder\OperandHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\ExitNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\NodeTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\N_WayNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\OneWayNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\ReturnNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\TwoWayNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\onewaynode\FallThroughNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\node\onewaynode\JumpNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ssa\DefinitionInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ssa\SSATransformer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\InterferenceBreaker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\PhiFunctionsEliminator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intermediaterepresentation\ssa\backtranslation\SSABackTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\ColoredStrings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\ExpressionUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\GraphViewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\houseKeepingUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\InstructionUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shared\RelatedRegistersMonitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\TypeDecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\TypeMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\TypeSharedPointers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\typeanalyzer\TypeAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\NoType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\TopType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\TypeBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\TypeTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\UnresolvedNamedType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\composedtype\ArrayType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\composedtype\ClassType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\composedtype\ComposedType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\composedtype\UnionType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\simpletype\IntegralType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\simpletype\IntegralTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\simpletype\PointerType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typeanalysis\types\simpletype\SimpleType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
