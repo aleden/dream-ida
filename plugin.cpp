@@ -213,7 +213,7 @@ void showDecompiledCode(const stringVectorPtr &codeLines, const std::map<int, in
 	simpleline_place_t s1;
 	simpleline_place_t s2(vi->sv.size()-1);
 	// create a custom viewer
-	vi->cv = create_custom_viewer("", (TWinControl *)form, &s1, &s2, &s1, NULL, &vi->sv, NULL, vi);
+	vi->cv = create_custom_viewer("", (TWinControl*)form, &s1, &s2, &s1, 0, &vi->sv);
 	// set the handlers so we can communicate with it
 	//set_custom_viewer_handlers(si->cv, ct_keyboard, ct_popup, NULL, ct_curpos, NULL, si);
 
@@ -296,9 +296,11 @@ void idaapi IDAP_run(int arg)
 			//if((pfn->startEA >= text_start && pfn->startEA <= text_end) || (pfn->startEA >= init_start && pfn->startEA <= init_end) || (pfn->startEA >= fini_start && pfn->startEA <= fini_end)){
 			if(pfn->startEA >= text_start && pfn->startEA < text_end){
 				num_funcs++;
-				qstring funcName_qstring;
-				get_func_name2(&funcName_qstring, pfn->startEA);
-				const char* funcName = funcName_qstring.c_str();
+
+				char func_name[MAXSTR];
+				func_name[0] = '\0';
+				get_func_name(pfn->startEA, func_name, sizeof(func_name));
+				const char* funcName = func_name;
 				if(std::string(funcName).compare("copy_internal") == 0) //[ switch.deep_copy()
 					continue;
 				logFile << funcName;
@@ -341,9 +343,11 @@ void idaapi IDAP_run(int arg)
 		IRBuilder irBuilder;
 
 		func_t *pfn = get_func(ea);
-		qstring funcName_qstring;
-		get_func_name2(&funcName_qstring, pfn->startEA);
-		const char* funcName = funcName_qstring.c_str();
+
+		char func_name[MAXSTR];
+		func_name[0] = '\0';
+		get_func_name(pfn->startEA, func_name, sizeof(func_name));
+		const char* funcName = func_name;
 
 		if(irBuilder.buildIntermediateRepresentation(ea)){
 			//showGraph(irBuilder.getControlFlowGraph());return;
@@ -475,7 +479,7 @@ void showGraph(const ControlFlowGraphPtr &controlFlowGraph){
 		netnode id;
 		id.create();
 		graph_viewer_t* gv = create_graph_viewer(form, id, callback, NULL, 0);
-		open_tform(form, FORM_MDI | FORM_TAB | FORM_MENU);
+		open_tform(form, FORM_TAB | FORM_MENU);
 		if(gv != NULL){
 			viewer_fit_window(gv);
 		}

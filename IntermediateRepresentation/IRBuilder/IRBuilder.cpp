@@ -29,9 +29,10 @@ bool IRBuilder::buildIntermediateRepresentation(ea_t address){
 	else{
 		func_t* pfn = get_func(address);
 		// TODO: demangle function name
-		qstring func_name;
-		get_func_name2(&func_name, pfn->startEA);
-		const char* funcName = func_name.c_str();
+		char func_name[MAXSTR];
+		func_name[0] = '\0';
+		get_func_name(pfn->startEA, func_name, sizeof(func_name));
+		const char* const funcName = func_name;
 		// char funcName[MAXSTR];
 		// get_func_name(pfn->startEA, funcName, MAXSTR);
 		// functionName = std::string(funcName);
@@ -94,9 +95,10 @@ bool IRBuilder::buildIRNoCalls(ea_t address){
 	}
 	else{
 		func_t* pfn = get_func(address);
-		qstring func_name;
-		get_func_name2(&func_name, pfn->startEA);
-		const char* funcName = func_name.c_str();
+		char func_name[MAXSTR];
+		func_name[0] = '\0';
+		get_func_name(pfn->startEA, func_name, sizeof(func_name));
+		const char* funcName = func_name;
 		// get_func_name(pfn->startEA, funcName, MAXSTR);
 		// functionName = std::string(funcName);
 		flowChartPtr flow_chart = std::make_shared<qflow_chart_t>(funcName, pfn, pfn->startEA, pfn->endEA, FC_PREDS/*CHART_WINGRAPH*/);

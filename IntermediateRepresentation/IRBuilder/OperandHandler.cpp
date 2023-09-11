@@ -103,9 +103,10 @@ ExpressionPtr OperandHandler::createStackVariable(int opIndex){
 					name += ".";
 				}
 					
-				qstring memberName;
-				if(get_member_name2(&memberName, member->id)){
-					name += std::string(memberName.c_str());	
+				char memberName[MAXSTR];
+				memberName[0] = '\0';
+				if(get_member_name(member->id, memberName, sizeof(memberName)) && memberName[0] != '\0') {
+					name += std::string(memberName);
 				}
 				else{
 					name += "NO_NAME";
@@ -459,10 +460,11 @@ ExpressionPtr OperandHandler::createGlobalVariable(ea_t addr){
 	//ea_t addr = cmd.Operands[opIndex].addr;
 
 	ExpressionPtr result;
-	qstring name;
+	char name[MAXSTR];
+	name[0] = '\0';
 	if(func_contains(func, addr)){
-		if(get_ea_name(&name, addr)){
-			result = std::make_shared<GlobalVariable>(std::string(name.c_str()), addr);
+		if(get_name(BADADDR, addr, &name[0], sizeof(name))) {
+			result = std::make_shared<GlobalVariable>(std::string(name), addr);
 		}
 		else{
 			char buffer [50];
@@ -473,8 +475,8 @@ ExpressionPtr OperandHandler::createGlobalVariable(ea_t addr){
 		}
 	}
 	else{
-		if(get_ea_name(&name, addr)){
-			result = std::make_shared<GlobalVariable>(std::string(name.c_str()), addr);
+		if(get_name(BADADDR, addr, &name[0], sizeof(name))) {
+			result = std::make_shared<GlobalVariable>(std::string(name), addr);
 		}
 		else{
 			result = std::make_shared<GlobalVariable>("gvar_" + boost::lexical_cast<std::string>(addr), addr);
