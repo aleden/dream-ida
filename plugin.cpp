@@ -52,7 +52,7 @@ void idaapi IDAP_term(void)
 const char *dialog = 
 	"STARTITEM 0\n"
 	"Decompilation options\n\n"
-	"<Output Folder:F:1:64::>\n"
+	"<Output Folder:F::64::>\n"
 	"<##Output##JSON File:R>\n"
 	"<Show Decompiled Code:R>>\n"
 	"<##Scope##Single Function:R>\n"
