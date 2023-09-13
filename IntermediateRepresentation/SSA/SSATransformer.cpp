@@ -774,9 +774,9 @@ RegisterPtr SSATransformer::getUsedRegister(Variable var){
 				}
 				
 				//use_inst->getUsesOfExpression(var.name, var.subscript, usedRegs);
-				//if(!usedRegs.empty()){
+				if(!usedRegs.empty()){
 				return std::dynamic_pointer_cast<Register>(*usedRegs.begin());
-				//}
+				}
 			}
 		}
 	}
