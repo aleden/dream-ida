@@ -274,10 +274,6 @@ void idaapi IDAP_run(int arg)
 		int num_funcs = 0;
 		ea_t text_start = get_segm_by_name(".text")->startEA;
 		ea_t text_end = get_segm_by_name(".text")->endEA;
-		/*ea_t init_start = get_segm_by_name(".init")->startEA;
-		ea_t init_end = get_segm_by_name(".init")->endEA;
-		ea_t fini_start = get_segm_by_name(".fini")->startEA;
-		ea_t fini_end = get_segm_by_name(".fini")->endEA;*/
 		ea_t lastFun = get_screen_ea();
 
 		std::ofstream logFile;
@@ -289,11 +285,9 @@ void idaapi IDAP_run(int arg)
 		blocksFile.open(blocks_path.string(), std::ofstream::out | std::ofstream::app);
 
 		int startF = lastFun != 0 ? get_func_num(lastFun) : 0;
-		int loop_max = 0;
 
 		for(int f = startF ; f < get_func_qty() ; ++f){
-			func_t *pfn = getn_func(f);//get_func(get_screen_ea());
-			//if((pfn->startEA >= text_start && pfn->startEA <= text_end) || (pfn->startEA >= init_start && pfn->startEA <= init_end) || (pfn->startEA >= fini_start && pfn->startEA <= fini_end)){
+			func_t *pfn = getn_func(f);
 			if(pfn->startEA >= text_start && pfn->startEA < text_end){
 				num_funcs++;
 
@@ -301,11 +295,11 @@ void idaapi IDAP_run(int arg)
 				func_name[0] = '\0';
 				get_func_name(pfn->startEA, func_name, sizeof(func_name));
 				const char* funcName = func_name;
-				if(std::string(funcName).compare("copy_internal") == 0) //[ switch.deep_copy()
+				if(std::string(funcName).compare("copy_internal") == 0)
 					continue;
 				logFile << funcName;
 				logFile.flush();
-				//continue;
+
 				qflow_chart_t flow_chart(funcName, pfn, pfn->startEA, pfn->endEA, FC_PREDS/*CHART_WINGRAPH*/);
 				if(!hasMultipleHeaders(&flow_chart) && !hasNWayNodes(&flow_chart)){
 					if(!hasOneBasicBlock(&flow_chart))
@@ -321,15 +315,10 @@ void idaapi IDAP_run(int arg)
 						blocksFile << dir_name << "," << funcName << "," << flow_chart.blocks.size() << std::endl;
 						blocksFile.flush();
 					}
-					loop_max++;
 				}
 				logFile << " ... OK\n";
 				logFile.flush();
-				/*if(loop_max == 120)
-						break;*/
 			}
-			//decompileFunction(pfn->startEA);
-			//msg("HexRays: #Lines = %d, #Gotos = %d\n", numberOfLines, numberOfGotos);
 		}
 		logFile.close();
 		blocksFile.close();
