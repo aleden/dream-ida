@@ -732,8 +732,9 @@ void SSATransformer::unifyAliasRegisters(){
 					def_inst->replaceDefinition(orig_var.name, orig_var.subscript, finalReg->deepcopy());
 					//dfa.updateDefinitionsMap(finalReg, def_inst);
 					std::vector<InstructionPtr>* usingInstructions = dfa.getUsingInstructions(orig_var.name, orig_var.subscript);
-					for(std::vector<InstructionPtr>::iterator use_iter = usingInstructions->begin() ; use_iter != usingInstructions->end() ; ++use_iter){
-						InstructionPtr use_inst = *use_iter;
+					const unsigned use_i_end = usingInstructions->size();
+					for (unsigned use_i = 0; use_i < use_i_end; ++use_i) {
+						InstructionPtr use_inst = usingInstructions->at(use_i);
 						use_inst->replaceUse(orig_var.name, orig_var.subscript, finalReg->deepcopy());
 						dfa.addInstructionToUsesMap(finalReg, use_inst);
 					}
